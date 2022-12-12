@@ -11,7 +11,7 @@ public class Logic {
         }
         boolean found = false;
         while (!found) {
-            //find random row and column to place a 2 in
+            // find random row and column to place a 2 in
             int r = (int) Math.floor(Math.random() * 4);
             int c = (int) Math.floor(Math.random() * 4);
             if (numbers.get(r).get(c) == 0) {
@@ -115,69 +115,4 @@ public class Logic {
         }
         return numbers2;
     }
-
-//    public static Tile[][] moveRight(Tile[][] tiles) {
-//        for (int i = 0; i < tiles.length; i++) {
-//            for (int j = tiles[i].length - 1; j > 1; j--) {
-//                if (tiles[i][j].getNumber() == 0) {
-//                    tiles[i][j].setNumber(tiles[i][j - 1].getNumber());
-//                    tiles[i][j - 1].setNumber(0);
-//                }
-//            }
-//        }
-//        return tiles;
-//    }
-//
-//    public static Tile[][] moveLeft(Tile[][] tiles) {
-//        for (int i = 0; i < tiles.length; i++) {
-//            for (int j = 0; j < tiles.length - 1; j++) {
-//                if (tiles[i][j].getNumber() == 0) {
-//                    tiles[i][j].setNumber(tiles[i][j + 1].getNumber());
-//                    tiles[i][j + 1].setNumber(0);
-//                }
-//            }
-//        }
-//        return tiles;
-//    }
-//
-//    public static Tile[][] rightClicked(Tile[][] tiles) {
-//        tiles = moveRight(tiles);
-//        for (int y = 0; y < tiles.length; y++) {
-//            for (int x = tiles[y].length - 1; x > 0; x--) {
-//                if (tiles[y][x].getNumber() == tiles[y][x - 1].getNumber()) {
-//                    tiles[y][x].setNumber(tiles[y][x].getNumber() * 2);
-//                    if (x - 2 >= 0)
-//                        tiles[y][x - 1].setNumber(tiles[y][x - 2].getNumber());
-//                    else {
-//                        tiles[y][x - 1].setNumber(0);
-//                    }
-//                }
-//            }
-//        }
-//        tiles = moveRight(tiles);
-//        System.out.println(Arrays.deepToString(tiles));
-//
-//        return tiles;
-//    }
-//
-//    public static Tile[][] leftClicked(Tile[][] tiles) {
-//        tiles = moveLeft(tiles);
-//        for (int y = 0; y < tiles.length; y++) {
-//            for (int x = 0; x < tiles[y].length - 1; x++) {
-//                if (tiles[y][x].getNumber() == 256 && tiles[y][x + 1].getNumber() == 256)
-//                    System.out.println(Arrays.deepToString(tiles));
-//                if (tiles[y][x].getNumber() == tiles[y][x + 1].getNumber()) {
-//                    tiles[y][x].setNumber(tiles[y][x].getNumber() * 2);
-//                    if (x + 2 <= tiles[y].length - 1)
-//                        tiles[y][x + 1].setNumber(tiles[y][x + 2].getNumber());
-//                    else {
-//                        tiles[y][x + 1].setNumber(0);
-//                    }
-//                }
-//            }
-//        }
-//        tiles = moveLeft(tiles);
-//        System.out.println(Arrays.deepToString(tiles));
-//        return tiles;
-//    }
 }
